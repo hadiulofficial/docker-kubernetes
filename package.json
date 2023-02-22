@@ -1,0 +1,24 @@
+{
+  "name": "docker-kuber",
+  "version": "1.0.0",
+  "description": "Dockerfile ``` FROM node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hadiul-Islam/docker-kubar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hadiul-Islam/docker-kubar/issues"
+  },
+  "homepage": "https://github.com/Hadiul-Islam/docker-kubar#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
