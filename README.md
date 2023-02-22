@@ -11,6 +11,7 @@
 | 4   | [What is DOCKERFILE?](#dockerfile)                                                                                                                                                                                                 |
 | 5   | [Managing docker images](#managing-docker-images)                                                                                                                                                                                                 |
 | 6   | [Managing docker containers](#managing-docker-containers)                                                                                                                                                                                                 |
+| 7  | [Docker attached and de attached mode](#docker-attached-and-de-attached-mode)                                                                                                                                                                                                 |
 
                                                             
 1. ### What is Docker?
@@ -108,3 +109,20 @@ This will start a container running the Node.js application, which can be access
 In addition to these commands, Docker also provides a range of options and flags that can be used to customize the behavior of images and containers. For more information, you can refer to the Docker documentation or run docker --help to see the available options.
 
 **[⬆ Back to Top](#table-of-contents)**
+
+
+7. ### Docker attached and de attached mode
+When you run a container, you can specify whether it should run in attached or detached mode. In attached mode, the container's standard input, output, and error streams are connected to the terminal. In detached mode, the container runs in the background and does not receive input from the terminal.
+- to run a container in detached mode, you can use the -d flag:
+```bash
+docker run -d <container-name>
+```
+- to attach to a running container, you can use the docker attach command:
+```bash
+docker attach <container-name>
+```
+- to see logs of a detached container, you can use the docker logs command:
+```bash
+docker logs <container-name>
+```
+
