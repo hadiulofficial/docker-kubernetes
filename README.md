@@ -87,23 +87,23 @@ This will start a container running the Node.js application, which can be access
 
 
 5. ### Managing docker images
-`docker images`: List all local images on your system
-`docker search <image-name>`: Search for images on Docker Hub or other registries
-`docker pull <image-name>`: Download an image from a registry
-`docker build -t <image-name> <path-to-dockerfile>`: Build a new image from a Dockerfile and tag it with a name
-`docker tag <source-image> <new-image-name>:<tag>`: Tag an existing image with a new name and version tag
-`docker push <image-name>`: Push an image to a registry
+- `docker images`: List all local images on your system
+- `docker search <image-name>`: Search for images on Docker Hub or other registries
+- `docker pull <image-name>`: Download an image from a registry
+- `docker build -t <image-name> <path-to-dockerfile>`: Build a new image from a Dockerfile and tag it with a name
+- `docker tag <source-image> <new-image-name>:<tag>`: Tag an existing image with a new name and version tag
+- `docker push <image-name>`: Push an image to a registry
 
 **[⬆ Back to Top](#table-of-contents)**
 
 6. ### Managing docker containers
 
-`docker run <image-name>`: Create and start a new container from an image
-`docker ps`: List all running containers on your system
-`docker ps -a`: List all containers, including stopped ones
-`docker stop <container-id>`: Stop a running container
-`docker rm <container-id>`: Remove a stopped container
-`docker logs <container-id>`: View the logs of a container
+- `docker run <image-name>`: Create and start a new container from an image
+- `docker ps`: List all running containers on your system
+- `docker ps -a`: List all containers, including stopped ones
+- `docker stop <container-id>`: Stop a running container
+- `docker rm <container-id>`: Remove a stopped container
+- `docker logs <container-id>`: View the logs of a container
 
 In addition to these commands, Docker also provides a range of options and flags that can be used to customize the behavior of images and containers. For more information, you can refer to the Docker documentation or run docker --help to see the available options.
 
