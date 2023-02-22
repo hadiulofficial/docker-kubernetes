@@ -9,7 +9,6 @@
 | 2   | [What is docker Container?](#containers)                                                                                                                                                                                                 |
 | 3   | [WHat is docker image?](#images)                                                                                                                                                                                                 |
 | 4   | [What is DOCKERFILE?](#dockerfile)                                                                                                                                                                                                 |
-  |
 | 5   | [Managing docker images](#managing-docker-images)                                                                                                                                                                                                 |
 | 6   | [Managing docker containers](#managing-docker-containers)                                                                                                                                                                                                 |
 
