@@ -9,13 +9,17 @@
 | 2   | [What is docker Container?](#containers)                                                                                                                                                                                                 |
 | 3   | [WHat is docker image?](#images)                                                                                                                                                                                                 |
 | 4   | [What is DOCKERFILE?](#dockerfile)                                                                                                                                                                                                 |
+  |
+| 5   | [Managing docker images](#managing-docker-images)                                                                                                                                                                                                 |
+| 6   | [Managing docker containers](#managing-docker-containers)                                                                                                                                                                                                 |
+
                                                             
 1. ### What is Docker?
 Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package. By doing so, thanks to the container, the developer can rest assured that the application will run on any other Linux machine regardless of any customized settings that machine might have that could differ from the machine used for writing and testing the code.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-2. ### Containers
+2. ### What is docker containers
 A Docker container is a lightweight, standalone, and executable software package that includes everything needed to run an application or service, including the code, system tools, libraries, and settings.
 
 Docker containers are created from Docker images, which are essentially snapshots of an application or service and its dependencies at a particular point in time. Each container runs in an isolated environment, separate from the host operating system and other containers, but with access to the host's resources such as CPU, memory, and network.
@@ -24,7 +28,7 @@ Docker containers are highly portable and can be deployed on any machine that su
 
 **[⬆ Back to Top](#table-of-contents)**
 
-3. ### Images
+3. ### What is docker iamge?
 A Docker image is a read-only template or snapshot that contains all the necessary files, dependencies, and configuration required to run a specific application or service in a Docker container.
 
 Docker images are built from a set of instructions called a Dockerfile, which specifies the base image to use, the application code, system libraries, environment variables, and other dependencies. The Dockerfile is used to create a reproducible and consistent image that can be deployed on any Docker-enabled environment.
@@ -79,5 +83,29 @@ This will create a Docker image with the tag `my-node-app`, based on the instruc
 docker run -p 3000:3000 my-node-app
 ```    
 This will start a container running the Node.js application, which can be accessed by visiting `http://localhost:3000` in a web browser.  
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
+5. ### Managing docker images
+`docker images`: List all local images on your system
+`docker search <image-name>`: Search for images on Docker Hub or other registries
+`docker pull <image-name>`: Download an image from a registry
+`docker build -t <image-name> <path-to-dockerfile>`: Build a new image from a Dockerfile and tag it with a name
+`docker tag <source-image> <new-image-name>:<tag>`: Tag an existing image with a new name and version tag
+`docker push <image-name>`: Push an image to a registry
+
+**[⬆ Back to Top](#table-of-contents)**
+
+6. ### Managing docker containers
+
+`docker run <image-name>`: Create and start a new container from an image
+`docker ps`: List all running containers on your system
+`docker ps -a`: List all containers, including stopped ones
+`docker stop <container-id>`: Stop a running container
+`docker rm <container-id>`: Remove a stopped container
+`docker logs <container-id>`: View the logs of a container
+
+In addition to these commands, Docker also provides a range of options and flags that can be used to customize the behavior of images and containers. For more information, you can refer to the Docker documentation or run docker --help to see the available options.
 
 **[⬆ Back to Top](#table-of-contents)**
