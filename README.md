@@ -94,6 +94,13 @@ This will start a container running the Node.js application, which can be access
 - `docker build -t <image-name> <path-to-dockerfile>`: Build a new image from a Dockerfile and tag it with a name
 - `docker tag <source-image> <new-image-name>:<tag>`: Tag an existing image with a new name and version tag
 - `docker push <image-name>`: Push an image to a registry
+- `docker rmi <image-name>`: Remove an image from your local system
+- `docker --rm <image-name>`: Remove a container after it has stopped running
+- `docker image prune`: Remove all unused images from your local system
+- `docker image inspect <image-name>`: View detailed information about an image
+- `docker cp <path> <container-name>:<path>`: Copy files or folders from local system to a container
+- `docker cp <container-name>:<path> <path>`: Copy files or folders from a container to local system
+
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -124,5 +131,35 @@ docker attach <container-name>
 - to see logs of a detached container, you can use the docker logs command:
 ```bash
 docker logs <container-name>
+```
+
+
+8. ### Push docker image to docker hub
+- First, you need to create a Docker Hub account and create a new repository for your image.
+- Then, you need to log in to Docker Hub using the docker login command:
+```bash
+docker login
+```
+- Next, you need to tag your image with the name of the repository you created on Docker Hub:
+```bash
+docker tag <image-name> <docker-hub-username>/<repository-name>
+```
+- Finally, you can push your image to Docker Hub using the docker push command:
+```bash
+docker push <docker-hub-username>/<repository-name>
+```
+**[⬆ Back to Top](#table-of-contents)**
+
+
+
+9. ### Pulling and Using shared images
+- To pull an image from Docker Hub, you can use the docker pull command:
+```bash
+docker pull <image-name>
+```
+
+- To run a container from an image and map the container's port 80 to port 8080 on the host, you can use the -p flag:
+```bash
+docker run -p 8080:80 <image-name>
 ```
 
